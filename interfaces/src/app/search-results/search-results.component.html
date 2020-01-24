@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+  <div class="categoriesResults">
+    <p *ngFor="let category of categories">{{ category.name }}</p>
+  </div>
+  <div class="customContainer">
+    <div class="productResults">
+      <a
+        *ngFor="let product of products"
+        class="productContainer"
+        routerLink="/item/{{ product.id }}"
+      >
+        <img class="productPicture" src="{{ product.picture }}" alt="product logo" />
+        <div class="productInfo">
+          <h1>$ {{ product.price.amount }} <img *ngIf="product.free_shipping" src="../../assets/ic_shipping.png" /></h1>
+          <p>{{ product.title }}</p>
+        </div>
+        <span>{{ product.address }} </span>
+      </a>
+    </div>
+  </div>
+</div>

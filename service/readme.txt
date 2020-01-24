@@ -1,0 +1,1 @@
+for launching the service run the following code "npm run dev"

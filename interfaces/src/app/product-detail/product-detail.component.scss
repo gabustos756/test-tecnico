@@ -1,0 +1,53 @@
+@import "../variables.scss";
+
+.productContainer
+{
+    margin: 40px 0;
+    background-color: white;
+    padding: 32px;
+    .productImage
+    {
+        width: 680px;
+        height: auto;
+    }
+    .productInfoContainer
+    {
+        color: $letterColor;
+        padding: 0 10px;
+        p{
+            font-size: 14px;
+            margin: 0 0 16px;
+        }
+        h2{
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+            max-width: 200px;
+        }
+        h1{
+            font-size: 46px;
+            margin: 36px 0
+        }
+        button{
+            color: $white;
+            background-color: #3483FA;
+            border-radius: 4px;
+            width: 100%;
+            border: none;
+            padding: 16px;
+        }
+    }
+    .productDescription{
+        padding: 32px;
+        h2{
+            font-size: 28;
+            margin: 0 0 32px;
+            color: $letterColor
+        }
+        p{
+            font-size: 16;
+            margin: 0;
+            color: $darkGray
+        }
+    }
+}

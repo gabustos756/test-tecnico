@@ -1,0 +1,41 @@
+@import "../variables.scss";
+
+.header {
+  background-color: $yellow;
+  width: 100%;
+  .headerContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    -webkit-appearance: none;
+    input {
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      background-color: #fff;
+      color: $letterColor;
+      border: 0 rgba(0, 0, 0, 0.2);
+      padding: 0 18px;
+      margin-left: 20px;
+      flex: 100%;
+    }
+    input:focus {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      height: auto;
+    }
+    .searchButton {
+      background-color: #e9ecef;
+      border: none;
+      width: 40px;
+      cursor: pointer;
+      fa-icon {
+        color: gray;
+        background: transparent;
+        height: 15px;
+        width: auto;
+      }
+    }
+  }
+}

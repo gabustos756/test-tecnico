@@ -1,0 +1,69 @@
+@import "../variables.scss";
+
+.customContainer {
+  background-color: $white;
+  .productResults {
+    .productContainer {
+      padding: 16px;
+      display: flex;
+      color: $letterColor;
+      cursor: pointer;
+      .productPicture {
+        min-height: 180px;
+        min-width: 180px;
+        border-radius: 4px;
+      };
+      h1{
+        font-size:24px;
+        color: $letterColor;
+        margin: 0 0 36px;
+        font-weight: 400;
+        img{
+          vertical-align: baseline;
+        }
+      };
+      h2{
+        color: $letterColor;
+        font-size: 18px;
+      }
+      span {
+        color: $darkGray;
+        margin-left: auto;
+        margin-top: 2rem;
+        font-size: 12px;
+      }
+    }
+    .productInfo {
+      padding: 20px;
+      text-align: left;
+      h1 {
+        font-weight: 300;
+        font-size: $font-size;
+      };
+      p {
+        font-weight: 300;
+      }
+    }
+    .productContainer:not(:last-child) {
+      border-bottom: 1.5px solid $gray;
+    }
+  }
+}
+
+.categoriesResults {
+  display: flex;
+  margin: 16px 0;
+  p {
+    color: $darkGray;
+    margin: 0 10px 0 0;
+    font-size: 14px;
+    font-weight: 100;
+  }
+  p:not(:last-child)::after {
+    content: ">";
+    margin-left: 10px;
+  }
+  p:last-child {
+    font-weight: bold;
+  }
+}
