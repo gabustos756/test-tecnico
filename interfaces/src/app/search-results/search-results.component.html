@@ -1,22 +1,35 @@
 <app-header></app-header>
 <div class="container">
   <div class="categoriesResults">
-    <p *ngFor="let category of categories">{{ category.name }}</p>
+    <p *ngFor="let category of categories">{{ category }}</p>
   </div>
   <div class="customContainer">
     <div class="productResults">
-      <a
+      <div
         *ngFor="let product of products"
-        class="productContainer"
-        routerLink="/item/{{ product.id }}"
+        class="productContainer row"
       >
-        <img class="productPicture" src="{{ product.picture }}" alt="product logo" />
-        <div class="productInfo">
-          <h1>$ {{ product.price.amount }} <img *ngIf="product.free_shipping" src="../../assets/ic_shipping.png" /></h1>
-          <p>{{ product.title }}</p>
+        <img
+          class="productPicture col-4"
+          src="{{ product.picture }}"
+          alt="product logo"
+        />
+        <div class="col-8">
+          <div class="row">
+            <div class="productInfo col-md-10 col-12">
+              <h1>
+                $ {{ product.price.amount }}
+                <img
+                  *ngIf="product.free_shipping"
+                  src="../../assets/ic_shipping.png"
+                />
+              </h1>
+              <a routerLink="/item/{{ product.id }}">{{ product.title }}</a>
+            </div>
+            <span class="col-md-2 col-12">{{ product.address }} </span>
+          </div>
         </div>
-        <span>{{ product.address }} </span>
-      </a>
+      </div>
     </div>
   </div>
 </div>

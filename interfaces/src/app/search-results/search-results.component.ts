@@ -10,6 +10,7 @@ import { SEOService } from "../seo.service";
   styleUrls: ["./search-results.component.scss"]
 })
 export class SearchResultsComponent implements OnInit {
+  
   public categories: any;
   public products: any;
   public onPage: boolean = true;

@@ -19,6 +19,7 @@ export class ProductDetailService {
       .get(endpoint + "productDetail?productID=" + productID)
       .pipe(map(this.extractData));
   }
+  
 }
 
 const endpoint = "http://localhost:3000/";

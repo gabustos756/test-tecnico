@@ -7,13 +7,20 @@
     padding: 32px;
     .productImage
     {
-        width: 680px;
+        width: 100%;
         height: auto;
+        @media screen and (max-width: $tablet-width) {
+            margin: auto
+        } 
     }
     .productInfoContainer
     {
         color: $letterColor;
         padding: 0 10px;
+        @media screen and (max-width: $tablet-width) {
+            text-align: center;
+            padding: 0;
+        }
         p{
             font-size: 14px;
             margin: 0 0 16px;
@@ -23,6 +30,9 @@
             font-weight: 500;
             margin: 0;
             max-width: 200px;
+            @media screen and (max-width: $tablet-width) {
+                max-width: 100%;
+            }
         }
         h1{
             font-size: 46px;
@@ -39,15 +49,26 @@
     }
     .productDescription{
         padding: 32px 0;
+        
         h2{
-            font-size: 28;
+            font-size: 28px;
             margin: 0 0 32px;
             color: $letterColor
         }
         p{
-            font-size: 16;
+            font-size: 16px;
             margin: 0;
             color: $darkGray
+        }
+        @media screen and (max-width: $tablet-width) {
+            text-align: center;
+            padding: 32px 0 15px;
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 14px;
+            }
         }
     }
 }
